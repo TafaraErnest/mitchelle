@@ -39,14 +39,8 @@ img:hover {
   }
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .images {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media screen and (max-width: 600px) {
-  .images {
-    grid-template-columns: 1fr;
-  }
-}
+} */

@@ -71,9 +71,17 @@ section a {
   .par {
     width: 70%;
   }
+
+  body {
+    height: 95vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    height: 90vh;
+  }
+
   .par {
     width: 100%;
   }

@@ -60,13 +60,11 @@ nav {
 }
 
 .curr__nav {
-  border-bottom: 2px solid var(--main-color);
   color: var(--main-color);
 }
 
 .nav__item:hover {
   color: var(--main-color);
-  border-bottom: 2px solid var(--main-color);
 }
 
 header {
@@ -155,11 +153,16 @@ header {
   .heading_2 {
     font-size: 4rem;
   }
+
+  nav {
+    font-size: 2.5rem;
+    margin: 1.5rem auto;
+  }
 }
 
 @media screen and (max-width: 800px) {
   :root {
-    --page-width: 90%;
+    --page-width: 80%;
   }
 
   nav {
@@ -173,11 +176,21 @@ header {
   .heading_2 {
     font-size: 3rem;
   }
+
+  nav {
+    width: 90%;
+    font-size: 3rem;
+    margin: 1rem auto;
+  }
+
+  .nav__item {
+    font-weight: 400;
+  }
 }
 
 @media screen and (max-width: 600px) {
   :root {
-    --page-width: 95%;
+    --page-width: 80%;
   }
 
   .heading_2 {
@@ -191,5 +204,9 @@ header {
   .nav__items {
     width: 100%;
     justify-content: space-around;
+  }
+
+  .nav__item {
+    font-weight: 300;
   }
 }
