@@ -1,19 +1,19 @@
-body {
+.top_sec {
   background: url(../images/image.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 60vh;
   width: 100vw;
   color: var(--text-white);
 }
 
-section {
-  width: var(--page-width);
-  margin: 0 auto;
+.top_section {
   height: 100%;
+  padding: 0 15%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .big__heading {
@@ -24,14 +24,85 @@ section {
   margin-bottom: 2rem;
 }
 
-.par {
+.par_intro {
   width: 50%;
   line-height: 1.5;
   margin-bottom: 3rem;
+  font-size: 2rem;
 }
 
 section a {
   margin-bottom: 5rem;
+}
+
+/* About setting */
+
+.cont {
+  display: flex;
+  width: var(--page-width);
+  margin: 50px auto;
+  color: var(--text-black);
+}
+
+.cont_1_2 {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title_1 {
+  font-size: 3rem;
+}
+
+.paragraph {
+  line-height: 1.6;
+  width: 70%;
+}
+
+.intro_img {
+  width: 90%;
+  border-radius: 50%;
+}
+
+.heading_1 {
+  color: var(--text-black);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 200;
+  margin: 4rem 0;
+}
+
+.cards_cont {
+  justify-content: space-between;
+}
+
+.info_card {
+  border: 1px solid var(--text-white);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 250px;
+  box-shadow: 1rem 1.5rem 2rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.info_card:hover {
+  background-color: var(--main-color);
+  color: var(--text-white);
+  border: 1px solid var(--main-color);
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card_par {
+  text-align: center;
+  width: 100%;
 }
 
 @keyframes heading_bounce {
@@ -40,11 +111,11 @@ section a {
   }
 
   30% {
-    transform: translateY(-15rem);
+    transform: translateY(-70%);
   }
 
   60% {
-    transform: translateY(1rem);
+    transform: translateY(10%);
   }
 
   65% {
@@ -56,33 +127,184 @@ section a {
   }
 }
 
+/* Gallery */
+.images {
+  margin-top: 5rem;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin: 5rem auto;
+}
+
+.gal_img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.gal_img:hover {
+  transform: scale(1.02);
+  border-radius: 0%;
+}
+
+/* Media for Home */
+@media screen and (max-width: 1600px) {
+  .images {
+    width: 80%;
+  }
+  .top_section {
+    padding: 0 15%;
+  }
+
+  .cont {
+    width: 80%;
+  }
+
+  .par_intro {
+    width: 75%;
+  }
+
+  .card_par {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
+  .images {
+    width: 85%;
+  }
+
+  .top_section {
+    padding: 0 10%;
+  }
+
   .big__heading {
     font-size: 6rem;
     margin-bottom: 1.8rem;
   }
+
+  .cont {
+    width: 90%;
+  }
+
+  .card_title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cont {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 960px) {
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .top_section {
+    padding: 0 5%;
+  }
+
   .big__heading {
     font-size: 4rem;
   }
 
-  .par {
+  .par_intro {
     width: 70%;
   }
 
-  body {
-    height: 95vh;
+  .title_1 {
+    font-size: 2.8rem;
+  }
+
+  .par {
+    width: 90%;
+  }
+
+  .heading_1 {
+    font-size: 4.5rem;
+  }
+
+  .info_card {
+    padding: 1rem;
+    width: 220px;
+  }
+
+  .card_title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cont_1_2 {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .par_intro {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+  img {
+    display: none;
+  }
+
+  .par_about {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .heading_1 {
+    margin: 1rem auto;
+  }
+
+  .info_card {
+    margin: 3rem auto;
+    width: 70%;
+  }
+
+  .cont {
+    margin: 30px auto;
   }
 }
 
 @media screen and (max-width: 600px) {
-  body {
+  main {
     height: 90vh;
   }
 
   .par {
     width: 100%;
   }
+
+  .heading_1 {
+    font-size: 3rem;
+  }
+
+  .info_card {
+    width: 90%;
+  }
+
+  .cont {
+    margin: 10px auto;
+  }
 }
+
+/* About media */

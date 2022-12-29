@@ -10,6 +10,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -22,49 +23,6 @@ body {
   font-size: 1.6rem;
   position: relative;
   color: var(--text-white);
-}
-
-/* Nav */
-.header__nav {
-  width: 100%;
-  position: fixed;
-  background-color: var(--faint-back);
-}
-
-nav {
-  width: var(--page-width);
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  color: var(--text-white);
-  margin: 2rem auto;
-}
-
-.nav__items {
-  list-style: none;
-  display: flex;
-}
-
-.nav__name {
-  cursor: pointer;
-  transition: all 1s ease-in-out;
-}
-
-.nav__item {
-  color: var(--text-white);
-  margin-left: 3rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s;
-  font-weight: 600;
-}
-
-.curr__nav {
-  color: var(--main-color);
-}
-
-.nav__item:hover {
-  color: var(--main-color);
 }
 
 header {
